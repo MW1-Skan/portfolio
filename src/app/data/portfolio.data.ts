@@ -35,7 +35,7 @@ export const PORTFOLIO_DATA: Project[] = [
         techStack: ['Angular 21', 'Supabase', 'Stripe', 'Resend', 'Vercel'],
         type: 'lab',
         aiAgentUsed: 'Claude Code & Gemini',
-        links: { demo: 'https://gift-timeline.com' },
+        links: { demo: 'https://gift-timeline.com', repo: 'https://github.com/MW1-Skan/gift-timeline' },
         featured: true
     },
     {
@@ -47,7 +47,7 @@ export const PORTFOLIO_DATA: Project[] = [
         techStack: ['Angular 20', 'Genkit', 'OpenAI', 'Tailwind'],
         type: 'lab',
         aiAgentUsed: 'Codex',
-        links: { demo: 'https://emo-gen.org' },
+        links: { demo: 'https://emo-gen.org', repo: 'https://github.com/MW1-Skan/emogen' },
         featured: true
     },
     {
@@ -59,6 +59,7 @@ export const PORTFOLIO_DATA: Project[] = [
         techStack: ['Angular 20', 'PrimeNG', 'Reactive Forms'],
         type: 'lab',
         aiAgentUsed: 'None',
+        links: { repo: 'https://github.com/MW1-Skan/my_form_builder' },
         featured: false
     },
     {
@@ -70,6 +71,7 @@ export const PORTFOLIO_DATA: Project[] = [
         techStack: ['Angular 20', 'Tailwind', 'Signals'],
         type: 'lab',
         aiAgentUsed: 'Codex',
+        links: { repo: 'https://github.com/MW1-Skan/pet_picker' },
         featured: true
     }
 ];

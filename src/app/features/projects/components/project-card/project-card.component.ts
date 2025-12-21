@@ -52,7 +52,7 @@ import { Project } from '../../../../models/project.model';
             <a [href]="links.demo" target="_blank" class="btn btn-primary">Live Demo</a>
           }
           @if (links.repo) {
-            <a [href]="links.repo" target="_blank" class="btn btn-outline">Code</a>
+            <a [href]="links.repo" target="_blank" class="btn btn-outline">Repo</a>
           }
         </div>
       }
