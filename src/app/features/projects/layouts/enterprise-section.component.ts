@@ -12,14 +12,23 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
     <section class="section">
       <div class="container">
         <div class="section-header" appScrollReveal>
-          <h2 class="section-title">Enterprise <span class="text-gradient">Ground Truth</span></h2>
+          <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
           <p class="section-subtitle">
-            Leading high-scale architectures where performance and reliability are non-negotiable.
+            Engineering France's leading occupational-health platform — regulated health data at
+            scale, event-driven microservices, and hard legal deadlines.
           </p>
         </div>
 
+        @for (project of currentProjects; track project.id) {
+          <app-project-card class="current-card" [project]="project" appScrollReveal />
+        }
+
+        <div class="previously-label" appScrollReveal>
+          Previously · Consulting &#64; Viveris Systèmes · Intern → Lead Developer in under 2 years
+        </div>
+
         <div class="projects-grid">
-          @for (project of enterpriseProjects; track project.id; let i = $index) {
+          @for (project of previousProjects; track project.id; let i = $index) {
             <app-project-card [project]="project" appScrollReveal [revealDelay]="i * 100" />
           }
         </div>
@@ -47,6 +56,30 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
       font-size: 1.1rem;
     }
 
+    .current-card {
+      display: block;
+      margin-bottom: 3.5rem;
+    }
+
+    .previously-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      color: var(--color-text-dim);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .previously-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -56,5 +89,6 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EnterpriseSectionComponent {
-  enterpriseProjects: Project[] = PORTFOLIO_DATA.filter(p => p.type === 'enterprise');
+  currentProjects: Project[] = PORTFOLIO_DATA.filter(p => p.type === 'enterprise' && p.current);
+  previousProjects: Project[] = PORTFOLIO_DATA.filter(p => p.type === 'enterprise' && !p.current);
 }

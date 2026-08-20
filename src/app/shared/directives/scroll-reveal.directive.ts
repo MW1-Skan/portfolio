@@ -15,6 +15,11 @@ export class ScrollRevealDirective implements OnInit {
     ngOnInit() {
         // Only run animation logic in the browser to prevent SSR crashes
         if (isPlatformBrowser(this.platformId)) {
+            // Without IntersectionObserver (test envs, legacy browsers), keep content visible
+            if (typeof IntersectionObserver === 'undefined') {
+                return;
+            }
+
             this.renderer.addClass(this.el.nativeElement, 'reveal');
 
             if (this.revealDelay > 0) {
