@@ -49,12 +49,10 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
               <div class="skill-item high accent">FastAPI</div>
               <div class="skill-item high accent">Vertex AI</div>
               <div class="skill-item high accent">Gemini</div>
-              <div class="skill-item high accent">Claude Agent SDK</div>
               <div class="skill-item high accent">Claude Code</div>
               <div class="skill-item medium accent">scikit-learn</div>
-              <div class="skill-item medium accent">OpenAI API</div>
+              <div class="skill-item medium accent">TensorFlow</div>
               <div class="skill-item medium accent">Genkit</div>
-              <div class="skill-item medium accent">Codex</div>
             </div>
           </div>
 

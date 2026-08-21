@@ -34,8 +34,6 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
           <span class="separator">/</span>
           <span class="tech-item">Redis</span>
           <span class="separator">/</span>
-          <span class="tech-item">Kubernetes</span>
-          <span class="separator">/</span>
           <span class="tech-item accent">Claude Code</span>
           <span class="separator">/</span>
           <span class="tech-item accent">Vertex AI</span>

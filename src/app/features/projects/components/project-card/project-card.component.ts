@@ -13,8 +13,11 @@ import { Project } from '../../../../models/project.model';
       [class.lab]="project().type === 'lab'">
       
       <!-- Card Header -->
+      @if (project().role || project().current || project().period || (project().aiAgentUsed && project().aiAgentUsed !== 'None')) {
       <div class="card-header">
-        <div class="role-badge">{{ project().role }}</div>
+        @if (project().role) {
+          <div class="role-badge">{{ project().role }}</div>
+        }
         @if (project().current) {
           <div class="ai-badge">
             <span class="pulse"></span>
@@ -29,6 +32,7 @@ import { Project } from '../../../../models/project.model';
           <div class="period-badge">{{ project().period }}</div>
         }
       </div>
+      }
 
       <!-- Content -->
       <div>
@@ -118,6 +122,7 @@ import { Project } from '../../../../models/project.model';
     .ai-badge {
       display: flex;
       align-items: center;
+      margin-left: auto;
       gap: 0.5rem;
       font-size: 0.75rem;
       color: var(--color-accent);
@@ -136,6 +141,7 @@ import { Project } from '../../../../models/project.model';
     }
 
     .period-badge {
+      margin-left: auto;
       font-size: 0.75rem;
       letter-spacing: 0.05em;
       color: var(--color-text-dim);

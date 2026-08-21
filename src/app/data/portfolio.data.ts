@@ -49,52 +49,50 @@ export const PORTFOLIO_DATA: Project[] = [
     {
         id: 'chess-elo-predictor',
         title: 'Chess Elo Predictor',
-        role: 'Creator & ML Engineer',
         shortDescription: 'Production-style ML service predicting game outcomes and player ratings.',
         fullDescription: "From a finished Lichess game, predicts the outcome and the players' average Elo. Built as a production ML service, not a notebook: reproducible pipeline with leakage guards, honest baselines, a typed FastAPI service, tests and Docker — live on Google Cloud Run, scaling to zero. Trained and evaluated on 19k games with 5-fold cross-validation.",
         techStack: ['Python', 'scikit-learn', 'FastAPI', 'Docker', 'Cloud Run'],
         type: 'lab',
+        aiAgentUsed: 'Claude Code',
         links: { demo: 'https://chess-elo-1011959788820.europe-west9.run.app', repo: 'https://github.com/MW1-Skan/chess-elo-predictor' },
         featured: true
     },
     {
         id: 'gmail-labeler',
         title: 'Gmail Auto-Labeler',
-        role: 'Creator',
         shortDescription: 'LLM-powered, safe-by-design Gmail inbox triage.',
         fullDescription: 'A personal automation tool that classifies and labels my Gmail inbox with LLMs, built on the Claude Agent SDK. Safe by design: it only ever adds labels — never archives, never marks as read — and every run is idempotent.',
         techStack: ['Python', 'Claude Agent SDK', 'Gmail API'],
         type: 'lab',
+        aiAgentUsed: 'Claude Code',
         links: { repo: 'https://github.com/MW1-Skan/gmail-labeler' },
         featured: false
     },
     {
         id: 'icebreakers',
         title: 'Retro Icebreakers',
-        role: 'Creator & Orchestrator',
         shortDescription: 'Real-time multiplayer icebreaker games for team retrospectives.',
         fullDescription: 'Seven real-time icebreaker games (Undercover, Codenames, Wavelength…) for team retrospectives: the facilitator projects the shared screen on a TV, players join by QR code and get their secret info on their own device. The server only ever sends per-audience projections — no secret can leak to the wrong client, guaranteed by non-leak tests — on a NestJS + WebSocket backend with Playwright e2e coverage.',
         techStack: ['Angular', 'NestJS', 'WebSockets', 'Playwright', 'Docker'],
         type: 'lab',
+        aiAgentUsed: 'Claude Code',
         links: { repo: 'https://github.com/MW1-Skan/icebreakers' },
         featured: true
     },
     {
         id: 'gift-timeline',
         title: 'Gift Timeline',
-        role: 'Creator & Orchestrator',
         shortDescription: 'Event-based memory timelines with premium features.',
         fullDescription: 'A comprehensive SaaS for creating digital gift timelines. Features Supabase auth, Stripe payments, and a privacy-first architecture with GDPR compliance. Built to be a "forever" gift.',
         techStack: ['Angular 21', 'Supabase', 'Stripe', 'Resend', 'Vercel'],
         type: 'lab',
         aiAgentUsed: 'Claude Code & Gemini',
-        links: { demo: 'https://gift-timeline.com', repo: 'https://github.com/MW1-Skan/gift-timeline' },
+        links: { repo: 'https://github.com/MW1-Skan/gift-timeline' },
         featured: true
     },
     {
         id: 'emogen',
         title: 'Emogen',
-        role: 'Creator & Orchestrator',
         shortDescription: 'AI-powered emoji generator with Chrome extension.',
         fullDescription: 'An emoji-driven mood picker with a Chrome extension for browser-based emoji generation. Features AI-powered contextual emoji sets via GPT-4o-mini, glassmorphism UI with dark theme, history tracking, favorites, and one-click copy to clipboard.',
         techStack: ['Angular 20', 'Chrome Extension', 'Genkit', 'OpenAI', 'Tailwind'],
@@ -106,17 +104,16 @@ export const PORTFOLIO_DATA: Project[] = [
     {
         id: 'its-ok',
         title: "It's Ok",
-        role: 'Creator',
         shortDescription: 'A private iOS companion app, built for my wife.',
         fullDescription: 'Built for my wife: a private, single-user iOS companion app. SwiftUI on device, a FastAPI proxy on Cloud Run calling Vertex AI (Gemini) behind IAM — no API keys ever shipped in the app.',
         techStack: ['SwiftUI', 'Vertex AI', 'FastAPI', 'Cloud Run'],
         type: 'lab',
+        aiAgentUsed: 'Claude Code',
         featured: false
     },
     {
         id: 'form-builder',
         title: 'My Form Builder',
-        role: 'Architect',
         shortDescription: 'Flexible dynamic form generation system.',
         fullDescription: 'A powerful form builder allowing users to create custom forms with complex validation rules. Built without AI agents to demonstrate raw architectural skill and mastery of Angular Forms.',
         techStack: ['Angular 20', 'PrimeNG', 'Reactive Forms'],
@@ -128,7 +125,6 @@ export const PORTFOLIO_DATA: Project[] = [
     {
         id: 'pet-picker',
         title: 'Pet Picker',
-        role: 'Creator & Orchestrator',
         shortDescription: 'Algorithmic pet recommendation engine.',
         fullDescription: 'A smart questionnaire application that matches users with their perfect pet breed. Uses a custom weighted scoring algorithm and local storage for privacy.',
         techStack: ['Angular 20', 'Tailwind', 'Signals'],
