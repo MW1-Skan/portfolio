@@ -15,9 +15,10 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
           <div class="radar-quadrant" appScrollReveal [revealDelay]="0">
             <h3 class="quadrant-title">Core Architecture</h3>
             <div class="skill-list">
-              <div class="skill-item high">Angular 21</div>
+              <div class="skill-item high">Angular</div>
               <div class="skill-item high">Node.js</div>
               <div class="skill-item high">TypeScript</div>
+              <div class="skill-item high">Microservices</div>
               <div class="skill-item medium">RxJS</div>
               <div class="skill-item medium">Nx Monorepo</div>
             </div>
@@ -27,34 +28,42 @@ import { ScrollRevealDirective } from '../../../shared/directives/scroll-reveal.
           <div class="radar-quadrant" appScrollReveal [revealDelay]="100">
             <h3 class="quadrant-title">Cloud & Scale</h3>
             <div class="skill-list">
-              <div class="skill-item high">AWS</div>
+              <div class="skill-item high">Kubernetes</div>
               <div class="skill-item high">Docker</div>
-              <div class="skill-item high">Oracle</div>
-              <div class="skill-item high">Git</div>
-              <div class="skill-item high">CI/CD</div>
-              <div class="skill-item medium">Supabase</div>
-              <div class="skill-item medium">PostgreSQL</div>
+              <div class="skill-item high">PostgreSQL</div>
+              <div class="skill-item high">Redis</div>
+              <div class="skill-item medium">Azure</div>
+              <div class="skill-item medium">Google Cloud</div>
+              <div class="skill-item medium">AWS</div>
+              <div class="skill-item medium">ArgoCD</div>
+              <div class="skill-item medium">Grafana</div>
+              <div class="skill-item medium">ElasticSearch</div>
             </div>
           </div>
 
           <!-- AI & Agents -->
           <div class="radar-quadrant ai-quadrant" appScrollReveal [revealDelay]="200">
-            <h3 class="quadrant-title">AI Orchestration</h3>
+            <h3 class="quadrant-title">AI Engineering</h3>
             <div class="skill-list">
+              <div class="skill-item high accent">Python</div>
+              <div class="skill-item high accent">FastAPI</div>
+              <div class="skill-item high accent">Vertex AI</div>
+              <div class="skill-item high accent">Gemini</div>
               <div class="skill-item high accent">Claude Code</div>
-              <div class="skill-item high accent">Codex</div>
-              <div class="skill-item medium accent">Gemini</div>
+              <div class="skill-item medium accent">scikit-learn</div>
+              <div class="skill-item medium accent">TensorFlow</div>
               <div class="skill-item medium accent">Genkit</div>
-              <div class="skill-item medium accent">OpenAI API</div>
             </div>
           </div>
 
           <!-- UI/UX -->
           <div class="radar-quadrant" appScrollReveal [revealDelay]="300">
-            <h3 class="quadrant-title">Experience</h3>
+            <h3 class="quadrant-title">Experience & Quality</h3>
             <div class="skill-list">
               <div class="skill-item high">CSS/SASS</div>
+              <div class="skill-item high">Playwright</div>
               <div class="skill-item medium">Tailwind</div>
+              <div class="skill-item medium">Storybook</div>
               <div class="skill-item medium">Angular Material</div>
               <div class="skill-item medium">Figma</div>
             </div>

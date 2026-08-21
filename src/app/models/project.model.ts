@@ -8,7 +8,10 @@ export type ProjectType = 'enterprise' | 'personal' | 'lab';
 export interface Project {
     id: string;
     title: string;
-    role: string;
+    role?: string;
+    company?: string;
+    period?: string;
+    current?: boolean;
     shortDescription: string;
     fullDescription: string;
     techStack: string[];

@@ -12,34 +12,33 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
           <img src="assets/profile.png" alt="Profile" class="profile-avatar" onerror="this.style.display='none'"/>
           <div class="avatar-glow"></div>
         </div>
-        <div class="badge-glass">Lead Full Stack Developer</div>
+        <div class="badge-glass">Software Engineer &#64; Padoa</div>
         <h1 class="hero-title">
           Architecting Scale.<br>
           <span class="text-gradient-primary">Orchestrating Innovation.</span>
         </h1>
         <p class="hero-subtitle">
-          Bridging the gap between 
-          <span class="highlight">300k+ LOC Enterprise Systems</span> 
-          and 
-          <span class="highlight">AI-Agentic Workflows</span>.
+          Engineering
+          <span class="highlight">health-tech at scale</span>
+          by day — building
+          <span class="highlight">AI-powered products</span>
+          in the lab.
         </p>
 
         <div class="tech-ticker">
-          <span class="tech-item">Angular 21</span>
+          <span class="tech-item">Angular</span>
           <span class="separator">/</span>
           <span class="tech-item">Node.js</span>
           <span class="separator">/</span>
-          <span class="tech-item">AWS</span>
+          <span class="tech-item">PostgreSQL</span>
           <span class="separator">/</span>
-          <span class="tech-item">Git</span>
-          <span class="separator">/</span>
-          <span class="tech-item">CI/CD</span>
+          <span class="tech-item">Redis</span>
           <span class="separator">/</span>
           <span class="tech-item accent">Claude Code</span>
           <span class="separator">/</span>
-          <span class="tech-item accent">Gemini</span>
+          <span class="tech-item accent">Vertex AI</span>
           <span class="separator">/</span>
-          <span class="tech-item accent">Codex</span>
+          <span class="tech-item accent">Gemini</span>
         </div>
       </div>
       

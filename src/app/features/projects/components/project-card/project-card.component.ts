@@ -13,18 +13,36 @@ import { Project } from '../../../../models/project.model';
       [class.lab]="project().type === 'lab'">
       
       <!-- Card Header -->
+      @if (project().role || project().current || project().period || (project().aiAgentUsed && project().aiAgentUsed !== 'None')) {
       <div class="card-header">
-        <div class="role-badge">{{ project().role }}</div>
-        @if (project().aiAgentUsed && project().aiAgentUsed !== 'None') {
+        @if (project().role) {
+          <div class="role-badge">{{ project().role }}</div>
+        }
+        @if (project().current) {
+          <div class="ai-badge">
+            <span class="pulse"></span>
+            Current
+          </div>
+        } @else if (project().aiAgentUsed && project().aiAgentUsed !== 'None') {
           <div class="ai-badge">
             <span class="pulse"></span>
             Agent: {{ project().aiAgentUsed }}
           </div>
+        } @else if (project().period) {
+          <div class="period-badge">{{ project().period }}</div>
         }
       </div>
+      }
 
       <!-- Content -->
-      <h3 class="title">{{ project().title }}</h3>
+      <div>
+        <h3 class="title">{{ project().title }}</h3>
+        @if (project().company) {
+          <div class="company-line">
+            {{ project().company }}@if (project().current && project().period) {<span class="period-inline"> · {{ project().period }}</span>}
+          </div>
+        }
+      </div>
       <p class="description">{{ project().fullDescription }}</p>
 
       <!-- Metrics (Enterprise) -->
@@ -104,6 +122,7 @@ import { Project } from '../../../../models/project.model';
     .ai-badge {
       display: flex;
       align-items: center;
+      margin-left: auto;
       gap: 0.5rem;
       font-size: 0.75rem;
       color: var(--color-accent);
@@ -121,10 +140,28 @@ import { Project } from '../../../../models/project.model';
       animation: pulse 2s infinite;
     }
 
+    .period-badge {
+      margin-left: auto;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      color: var(--color-text-dim);
+      white-space: nowrap;
+    }
+
     .title {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
       color: var(--color-text-main);
+    }
+
+    .company-line {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-text-dim);
+    }
+
+    .period-inline {
+      font-weight: 400;
     }
 
     .description {
