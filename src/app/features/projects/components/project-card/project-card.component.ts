@@ -12,8 +12,8 @@ import { Project } from '../../../../models/project.model';
       [class.enterprise]="project().type === 'enterprise'"
       [class.lab]="project().type === 'lab'">
       
-      <!-- Card Header -->
-      @if (project().role || project().current || project().period || (project().aiAgentUsed && project().aiAgentUsed !== 'None')) {
+      <!-- Card Header (experience cards) -->
+      @if (project().role || project().current || project().period) {
       <div class="card-header">
         @if (project().role) {
           <div class="role-badge">{{ project().role }}</div>
@@ -23,11 +23,6 @@ import { Project } from '../../../../models/project.model';
             <span class="pulse"></span>
             Current
           </div>
-        } @else if (project().aiAgentUsed && project().aiAgentUsed !== 'None') {
-          <div class="ai-badge">
-            <span class="pulse"></span>
-            Agent: {{ project().aiAgentUsed }}
-          </div>
         } @else if (project().period) {
           <div class="period-badge">{{ project().period }}</div>
         }
@@ -36,7 +31,15 @@ import { Project } from '../../../../models/project.model';
 
       <!-- Content -->
       <div>
-        <h3 class="title">{{ project().title }}</h3>
+        <div class="title-row">
+          <h3 class="title">{{ project().title }}</h3>
+          @if (project().aiAgentUsed && project().aiAgentUsed !== 'None') {
+            <div class="ai-badge">
+              <span class="pulse"></span>
+              Agent: {{ project().aiAgentUsed }}
+            </div>
+          }
+        </div>
         @if (project().company) {
           <div class="company-line">
             {{ project().company }}@if (project().current && project().period) {<span class="period-inline"> · {{ project().period }}</span>}
@@ -124,6 +127,7 @@ import { Project } from '../../../../models/project.model';
       align-items: center;
       margin-left: auto;
       gap: 0.5rem;
+      white-space: nowrap;
       font-size: 0.75rem;
       color: var(--color-accent);
       background: rgba(16, 185, 129, 0.1);
@@ -148,9 +152,18 @@ import { Project } from '../../../../models/project.model';
       white-space: nowrap;
     }
 
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
     .title {
       font-size: 1.5rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
       color: var(--color-text-main);
     }
 
